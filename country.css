@@ -1,0 +1,154 @@
+#block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;    
+    padding: 0px 20px;
+}
+
+.card {
+    box-shadow: 0 0 5px black;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 30px;
+    width: fit-content;
+    text-align: center;
+    gap: 50px;
+    padding: 0px 20px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 30px;
+    width: 300px;
+    height: 100%;
+}
+
+body.dark-mode {
+    transition: 0.3s ease;
+    color: white;
+}   
+
+.dark-mode #theme {
+    transition: 0.3s ease;
+    color: white;
+}
+
+#theme {
+    border: none;
+    background-color: unset;
+    display: flex;
+    justify-self: right;
+    margin: 40px;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+}
+
+.circle {
+    background-color: #1F242D;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    right: 60px;
+    pointer-events: none;
+}
+
+@keyframes ThemeCircle {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(150);
+        position: fixed;
+        pointer-events: auto;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@keyframes ThemeCircleBack {
+    from {
+        transform: scale(150);
+        position: fixed;
+        pointer-events: auto;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.Back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+#country-details {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.detSpan {
+    left: 23vw;
+    position: absolute;
+}
+
+@media(max-width:1170px) {
+    #country-details {
+        left: 15%;
+    }
+}
+
+@media(max-width:930px) {
+    #country-details {
+        left: 10%;
+    }
+}
+
+
+@media(max-width:830px) {
+    #country-details {
+        left: 0;
+    }
+    .card {
+        margin: 40px;
+    }
+}
+
+@media(max-width:600px) {
+    .card {
+        flex-direction: column;
+    }
+} 
